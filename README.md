@@ -1,21 +1,20 @@
 <div align="center">
 
-  <!-- Top Hero Marquee Banner with Rounded Corners -->
-  <img src="resources/Marquee%20Promo%20Banner.png" width="100%" alt="LingoSub Marquee Banner" style="border-radius: 16px;" />
-
-  <!-- GUARANTEED GAP: Forces a clean space between banner and logo -->
-  <br><br><br><br>
-
-  <!-- Extension Logo -->
-  <img src="assets/branding/logo.svg" width="96" height="96" alt="LingoSub Logo" />
+  <!-- Main Extension Logo at the Top -->
+  <img src="assets/branding/logo.svg" width="100" height="100" alt="LingoSub Logo" />
 
   <h1>LingoSub for YouTube™</h1>
 
-  **Watch YouTube in any language. Beautiful dual subtitles, instant hover word definitions, and clean transcript exports.**
+  **🌍 Watch YouTube in any language. Beautiful dual subtitles, instant hover word definitions, and clean transcript exports.**
+
+  <br>
+
+  <!-- Marquee Promo Banner under the title with rounded corners -->
+  <img src="resources/Marquee%20Promo%20Banner.png" width="100%" alt="LingoSub Marquee Banner" style="border-radius: 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);" />
 
   <br><br>
 
-  <!-- BIG & ATTRACTIVE DOWNLOAD BUTTONS (Height 46px makes them look like real buttons) -->
+  <!-- Big & Attractive Download Buttons -->
   <a href="https://addons.mozilla.org/firefox/addon/lingosub">
     <img src="https://img.shields.io/badge/Get_it_for_Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" height="46" alt="Get it for Firefox" />
   </a>
@@ -26,7 +25,7 @@
 
   <br><br>
 
-  <!-- Small Information Tags -->
+  <!-- Professional Status Badges -->
   <p>
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square" alt="License: GPL-3.0" />
     <img src="https://img.shields.io/badge/Version-2.0.0-success.svg?style=flat-square" alt="Version 2.0.0" />
@@ -38,7 +37,7 @@
 
 ---
 
-## What is LingoSub for YouTube™?
+## ✨ What is LingoSub for YouTube™?
 
 **LingoSub** is a free, high-performance browser extension that brings a complete professional subtitle studio directly inside your YouTube™ video player. 
 
@@ -46,37 +45,38 @@ Whether you want to learn a foreign language, understand global content, or down
 
 ---
 
-## Next-Level Features
+## 🚀 Next-Level Features
 
-* **Real-Time Dual Subtitles:** Read the original language and your translated language together on screen. Perfect for language learners and international viewers.
-* **Hover to Translate Any Word:** Do not understand a specific word? Just hover your mouse pointer over it on the video. An instant floating dictionary card will show you its exact meaning!
-* **One-Click Native Video Captions:** No need to download files first. Simply click **"Video Captions"** inside the player menu, and LingoSub will instantly load clean subtitles directly into the video.
-* **Clean Transcripts & Multi-Format Exporter:** Read through the full video transcript with live time stamps. Export clean transcripts in **.SRT**, **.VTT**, or **.TXT** format with zero duplicate lines.
-* **Play Your Own Subtitles (.SRT, .VTT):** Have a local subtitle file on your computer? Drag and drop any `.srt` or `.vtt` file directly into YouTube to play it in perfect sync.
-* **Minimalist In-Player UI:** Designed to match native YouTube aesthetics. Features smooth translucent glass menus, customizable typography, plate blur, and dual-axis drag & lock controls.
+* **🌍 Real-Time Dual Subtitles:** Read the original language and your translated language together on screen. Perfect for language learners and international viewers.
+* **🖱️ Hover to Translate Any Word:** Do not understand a specific word? Just hover your mouse pointer over it on the video. An instant floating dictionary card will show you its exact meaning!
+* **⚡ One-Click Native Video Captions:** No need to download files first. Simply click **"Video Captions"** inside the player menu, and LingoSub will instantly load clean subtitles directly into the video.
+* **📖 Clean Transcripts & Multi-Format Exporter:** Read through the full video transcript with live time stamps. Export clean transcripts in **.SRT**, **.VTT**, or **.TXT** format with zero duplicate lines.
+* **📂 Play Your Own Subtitles (.SRT, .VTT):** Have a local subtitle file on your computer? Drag and drop any .srt or .vtt file directly into YouTube to play it in perfect sync.
+* **🎨 Minimalist In-Player UI:** Designed to match native YouTube aesthetics. Features smooth translucent glass menus, customizable typography, plate blur, and dual-axis drag & lock controls.
 
 ---
 
-## Download & Installation
+## 📥 Download & Installation
 
 ### Option 1: Firefox Add-ons (Recommended)
-You can install LingoSub directly from the official Mozilla store:
+You can install LingoSub directly from the official Mozilla store safely and easily:
 * **[Install LingoSub on Firefox AMO](https://addons.mozilla.org/firefox/addon/lingosub)**
 
 ### Option 2: Chrome Web Store
-* **Status:** *Coming Soon!* (Will be released shortly after initial community feedback).
+* **Status:** *Coming Soon!* (Will be released shortly after our initial community feedback).
 
 ### Option 3: Manual Developer Install (Test from Source)
-1. Download or clone this repository:
-   `git clone https://github.com/aninduuthsara/LingoSub-for-YouTube-.git`
-2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
-3. Click **"Load Temporary Add-on..."**.
-4. Select the `manifest.json` file inside the project folder.
+If you want to test the extension directly from the source code, follow these simple steps:
+
+1. Copy this link: `https://github.com/aninduuthsara/LingoSub-for-YouTube-.git` and clone it to your computer using Git, or simply download it as a ZIP file and extract it.
+2. Open your Firefox browser and type `about:debugging#/runtime/this-firefox` in the address bar.
+3. Click the **"Load Temporary Add-on..."** button.
+4. Select the `manifest.json` file located inside the downloaded project folder.
 5. Open any YouTube video and enjoy!
 
 ---
 
-## Keyboard & In-Player Controls
+## ⌨️ Keyboard & In-Player Controls
 
 | Action | How to do it |
 | :--- | :--- |
@@ -88,7 +88,7 @@ You can install LingoSub directly from the official Mozilla store:
 
 ---
 
-## Privacy & Security
+## 🔒 Privacy & Security
 
 * **Zero Tracking:** We do not collect, store, or sell your private browsing history.
 * **Open Source:** Every line of code is open for public review and audit.
@@ -96,7 +96,7 @@ You can install LingoSub directly from the official Mozilla store:
 
 ---
 
-## Support & Feedback
+## 💡 Support & Feedback
 
 LingoSub is an independent open-source project created with care. If you enjoy using it, your support helps keep it active and updated!
 
@@ -112,11 +112,11 @@ LingoSub is an independent open-source project created with care. If you enjoy u
 
 ---
 
-## License
+## ⚖️ License
 
-This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. See the LICENSE file in the repository for more details.
 
 ---
 
-## Trademark Disclaimer
+## ©️ Trademark Disclaimer
 YouTube™ is a trademark of Google LLC. This extension ("LingoSub for YouTube™") is an independent open-source software project created by Anindu Uthsara and is not affiliated with, endorsed by, or sponsored by Google LLC or YouTube.
