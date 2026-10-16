@@ -1,25 +1,32 @@
 <div align="center">
 
-  <!-- Top Hero Marquee Banner -->
-  <img src="resources/Marquee%20Promo%20Banner.png" width="100%" alt="LingoSub Marquee Banner" style="border-radius: 12px; margin-bottom: 20px;" />
+  <!-- Top Hero Marquee Banner with Rounded Corners -->
+  <img src="resources/Marquee%20Promo%20Banner.png" width="100%" alt="LingoSub Marquee Banner" style="border-radius: 16px;" />
+
+  <!-- GUARANTEED GAP: Forces a clean space between banner and logo -->
+  <br><br><br><br>
 
   <!-- Extension Logo -->
-  <img src="resources/Main.svg" width="90" height="90" alt="LingoSub Logo" />
+  <img src="assets/branding/logo.svg" width="96" height="96" alt="LingoSub Logo" />
 
-  # LingoSub for YouTube™
+  <h1>LingoSub for YouTube™</h1>
 
   **Watch YouTube in any language. Beautiful dual subtitles, instant hover word definitions, and clean transcript exports.**
 
-  <!-- Interactive Store & Status Badges -->
-  <p>
-    <a href="https://addons.mozilla.org/firefox/addon/lingosub">
-      <img src="https://img.shields.io/badge/Firefox_Add--Ons-Install_Now-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Firefox Add-ons" />
-    </a>
-    <a href="#">
-      <img src="https://img.shields.io/badge/Chrome_Web_Store-Coming_Soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Chrome Web Store" />
-    </a>
-  </p>
+  <br><br>
 
+  <!-- BIG & ATTRACTIVE DOWNLOAD BUTTONS (Height 46px makes them look like real buttons) -->
+  <a href="https://addons.mozilla.org/firefox/addon/lingosub">
+    <img src="https://img.shields.io/badge/Get_it_for_Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" height="46" alt="Get it for Firefox" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="#">
+    <img src="https://img.shields.io/badge/Available_on_Chrome-Coming_Soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" height="46" alt="Available on Chrome" />
+  </a>
+
+  <br><br>
+
+  <!-- Small Information Tags -->
   <p>
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square" alt="License: GPL-3.0" />
     <img src="https://img.shields.io/badge/Version-2.0.0-success.svg?style=flat-square" alt="Version 2.0.0" />
@@ -41,35 +48,12 @@ Whether you want to learn a foreign language, understand global content, or down
 
 ## Next-Level Features
 
-### 1. Real-Time Dual Subtitles
-Read the original language and your translated language together on screen. Perfect for language learners and international viewers.
-<p align="center">
-  <img src="resources/Screenshot%20-%2001.png" width="85%" alt="Real-Time Dual Subtitles Feature" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-</p>
-
-### 2. Hover to Translate Any Word
-Do not understand a specific word? Just hover your mouse pointer over it on the video. An instant floating dictionary card will show you its exact meaning!
-<p align="center">
-  <img src="resources/Screenshot%20-%2002.png" width="85%" alt="Hover Translation Feature" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-</p>
-
-### 3. One-Click Native Video Captions
-No need to download files first. Simply click **"Video Captions"** inside the player menu, and LingoSub will instantly load clean subtitles directly into the video.
-<p align="center">
-  <img src="resources/Screenshot%20-%2003.png" width="85%" alt="One Click Captions Fetcher" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-</p>
-
-### 4. Clean Transcripts & Multi-Format Exporter
-Read through the full video transcript with live time stamps. Export clean transcripts in **.SRT**, **.VTT**, or **.TXT** format with zero duplicate lines.
-<p align="center">
-  <img src="resources/Screenshot%20-%2004.png" width="85%" alt="Clean Transcript Exporter" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-</p>
-
-### 5. Play Your Own Subtitles & Minimalist UI
-Drag and drop your own `.srt` or `.vtt` files directly into YouTube. Control everything through a stunning, native-looking translucent glass menu.
-<p align="center">
-  <img src="resources/Screenshot-05.png" width="85%" alt="Minimalist In-Player UI" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-</p>
+* **Real-Time Dual Subtitles:** Read the original language and your translated language together on screen. Perfect for language learners and international viewers.
+* **Hover to Translate Any Word:** Do not understand a specific word? Just hover your mouse pointer over it on the video. An instant floating dictionary card will show you its exact meaning!
+* **One-Click Native Video Captions:** No need to download files first. Simply click **"Video Captions"** inside the player menu, and LingoSub will instantly load clean subtitles directly into the video.
+* **Clean Transcripts & Multi-Format Exporter:** Read through the full video transcript with live time stamps. Export clean transcripts in **.SRT**, **.VTT**, or **.TXT** format with zero duplicate lines.
+* **Play Your Own Subtitles (.SRT, .VTT):** Have a local subtitle file on your computer? Drag and drop any `.srt` or `.vtt` file directly into YouTube to play it in perfect sync.
+* **Minimalist In-Player UI:** Designed to match native YouTube aesthetics. Features smooth translucent glass menus, customizable typography, plate blur, and dual-axis drag & lock controls.
 
 ---
 
@@ -84,9 +68,7 @@ You can install LingoSub directly from the official Mozilla store:
 
 ### Option 3: Manual Developer Install (Test from Source)
 1. Download or clone this repository:
-   ```bash
-   git clone https://github.com/aninduuthsara/LingoSub-for-YouTube-.git
-   ```
+   `git clone https://github.com/aninduuthsara/LingoSub-for-YouTube-.git`
 2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
 3. Click **"Load Temporary Add-on..."**.
 4. Select the `manifest.json` file inside the project folder.
@@ -120,7 +102,7 @@ LingoSub is an independent open-source project created with care. If you enjoy u
 
 <p align="center">
   <a href="https://buymeacoffee.com/aninduuthsara">
-    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Project-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Support on Buy Me A Coffee" />
+    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Project-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" height="40" alt="Support on Buy Me A Coffee" />
   </a>
 </p>
 
