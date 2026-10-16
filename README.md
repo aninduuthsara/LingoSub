@@ -12,19 +12,19 @@
   <!-- Marquee Promo Banner (Responsive 100% Width with perfect gaps) -->
   <img src="resources/Marquee%20Promo%20Banner.png" width="100%" alt="LingoSub Marquee Banner" style="border-radius: 14px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
 
-  <!-- Big & Attractive Download Buttons -->
-  <p style="margin-top: 15px; margin-bottom: 10px;">
+  <!-- Big & Attractive Download Buttons (Increased gap: margin-top: 40px) -->
+  <p style="margin-top: 40px; margin-bottom: 10px;">
     <a href="https://addons.mozilla.org/firefox/addon/lingosub">
-      <img src="https://img.shields.io/badge/Get_it_for_Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" height="42" alt="Get it for Firefox" />
+      <img src="https://img.shields.io/badge/Get_it_for_Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" height="46" alt="Get it for Firefox" />
     </a>
-    &nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="#">
-      <img src="https://img.shields.io/badge/Available_on_Chrome-Coming_Soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" height="42" alt="Available on Chrome" />
+      <img src="https://img.shields.io/badge/Available_on_Chrome-Coming_Soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" height="46" alt="Available on Chrome" />
     </a>
   </p>
 
   <!-- Professional Status Badges -->
-  <p style="margin-top: 0;">
+  <p style="margin-top: 15px;">
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square" alt="License: GPL-3.0" />
     <img src="https://img.shields.io/badge/Version-2.0.0-success.svg?style=flat-square" alt="Version 2.0.0" />
     <img src="https://img.shields.io/badge/Pure_Vanilla_JS-Zero_Bloat-yellow.svg?style=flat-square" alt="Vanilla JS" />
