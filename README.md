@@ -1,32 +1,30 @@
 <div align="center">
 
   <!-- Main Extension Logo at the Top -->
-  <img src="assets/branding/logo.svg" width="100" height="100" alt="LingoSub Logo" />
+  <img src="assets/branding/logo.svg" width="85" height="85" alt="LingoSub Logo" style="margin-bottom: 0;" />
 
-  <h1>LingoSub for YouTube™</h1>
+  <h1 style="margin-top: 10px; margin-bottom: 5px;">LingoSub for YouTube™</h1>
 
-  **🌍 Watch YouTube in any language. Beautiful dual subtitles, instant hover word definitions, and clean transcript exports.**
+  <p style="margin-top: 0; margin-bottom: 15px; color: #dddddd;">
+    <b>🌍 Watch YouTube in any language. Beautiful dual subtitles, instant hover word definitions, and clean transcript exports.</b>
+  </p>
 
-  <br>
-
-  <!-- Marquee Promo Banner under the title with rounded corners -->
-  <img src="resources/Marquee%20Promo%20Banner.png" width="100%" alt="LingoSub Marquee Banner" style="border-radius: 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);" />
-
-  <br><br>
+  <!-- Marquee Promo Banner (Responsive 100% Width with perfect gaps) -->
+  <img src="resources/Marquee%20Promo%20Banner.png" width="100%" alt="LingoSub Marquee Banner" style="border-radius: 14px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
 
   <!-- Big & Attractive Download Buttons -->
-  <a href="https://addons.mozilla.org/firefox/addon/lingosub">
-    <img src="https://img.shields.io/badge/Get_it_for_Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" height="46" alt="Get it for Firefox" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="#">
-    <img src="https://img.shields.io/badge/Available_on_Chrome-Coming_Soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" height="46" alt="Available on Chrome" />
-  </a>
-
-  <br><br>
+  <p style="margin-top: 15px; margin-bottom: 10px;">
+    <a href="https://addons.mozilla.org/firefox/addon/lingosub">
+      <img src="https://img.shields.io/badge/Get_it_for_Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" height="42" alt="Get it for Firefox" />
+    </a>
+    &nbsp;&nbsp;
+    <a href="#">
+      <img src="https://img.shields.io/badge/Available_on_Chrome-Coming_Soon-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" height="42" alt="Available on Chrome" />
+    </a>
+  </p>
 
   <!-- Professional Status Badges -->
-  <p>
+  <p style="margin-top: 0;">
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square" alt="License: GPL-3.0" />
     <img src="https://img.shields.io/badge/Version-2.0.0-success.svg?style=flat-square" alt="Version 2.0.0" />
     <img src="https://img.shields.io/badge/Pure_Vanilla_JS-Zero_Bloat-yellow.svg?style=flat-square" alt="Vanilla JS" />
