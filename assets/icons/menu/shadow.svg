@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="24px"
+   viewBox="0 -960 960 960"
+   width="24px"
+   fill="#e3e3e3"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="shadow.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="24.333333"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-width="1440"
+     inkscape:window-height="831"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="m383.41-335.2 353.75-353.6q-12.44-14.69-26.14-27.65-13.69-12.96-28.48-25.06L356.33-415.22q4.49 21.68 11.08 41.18 6.6 19.5 16 38.84Zm402.5-20.06q18.96-45.32 23.24-95.6L537.93-178.5q8.48 3.78 18.6 8.31 10.12 4.54 18.45 7.39 49.06-15.09 89.61-42.63 40.55-27.53 71.45-66.02 30.9-38.49 49.87-83.81ZM148.82-480q0 128.98 85.91 222.06 85.92 93.09 211.81 103.66-77.03-54.65-122.91-139.2-45.88-84.55-45.88-186.48 0-101.93 46.33-186.52t123.2-139.24q-125.73 10.42-212.1 103.36-86.36 92.95-86.36 222.36Zm327.01 262.52 328.68-328.43q-4.48-21.44-11.41-41.44-6.93-20.01-16.32-39L422.61-272.51q15.61 19.45 26.06 30.02 10.44 10.57 27.16 25.01ZM321.45-105.24q-74.2-31.94-129.23-86.98-55.04-55.03-86.98-129.21Q73.3-395.6 73.3-479.98q0-84.38 31.94-158.57 31.94-74.2 86.95-129.24 55.01-55.05 129.2-87.06 74.18-32.01 158.57-32.01 84.4 0 158.61 32.01 74.21 32 129.25 87.03 55.03 55.04 87.03 129.25 32.01 74.21 32.01 158.61 0 84.39-32.01 158.57-32.01 74.19-87.06 129.2-55.04 55.01-129.22 86.95Q564.4-73.3 480.02-73.3q-84.38 0-158.57-31.94Zm30.9-407.49L619.2-780.24q-10.35-4.76-20.28-8.94-9.93-4.18-20.94-7.36-92.57 30.24-154.51 107.11-61.93 76.87-71.12 176.7ZM580.88-480Z"
+     id="path1"
+     style="fill:#ffffff;fill-opacity:1" />
+</svg>

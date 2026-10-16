@@ -1,0 +1,82 @@
+{
+  "manifest_version": 3,
+  "name": "LingoSub for YouTube™",
+  "short_name": "LingoSub",
+  "version": "2.0.0",
+  "description": "High-performance in-player subtitle suite, live translation, hover definitions, and transcript extractor for YouTube™.",
+  "author": "Anindu Uthsara",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "lingosub@aninduuthsara",
+      "strict_min_version": "115.0"
+    }
+  },
+
+  "icons": {
+    "48": "assets/icons/icon48.png",
+    "96": "assets/icons/icon96.png",
+    "128": "assets/icons/icon128.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "48": "assets/icons/icon48.png",
+      "96": "assets/icons/icon96.png",
+      "128": "assets/icons/icon128.png"
+    },
+    "default_title": "LingoSub for YouTube™ (Click to Toggle)"
+  },
+
+  "background": {
+    "scripts": [
+      "background/background.js"
+    ]
+  },
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "https://clients5.google.com/*",
+    "https://translate.googleapis.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "css": [
+        "content/styles/in-player-dock.css",
+        "content/styles/subtitle-overlay.css"
+      ],
+      "js": [
+        "content/modules/storage-manager.js",
+        "content/modules/transcript-extractor.js",
+        "content/modules/translation-manager.js",
+        "content/modules/subtitle-engine.js",
+        "content/modules/player-injector.js",
+        "content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "fonts/*",
+        "assets/branding/*",
+        "assets/icons/*",
+        "assets/icons/menu/*"
+      ],
+      "matches": [
+        "*://*.youtube.com/*"
+      ]
+    }
+  ]
+}

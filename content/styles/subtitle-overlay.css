@@ -1,0 +1,320 @@
+/* ==========================================================================
+   1. NATIVE YOUTUBE CAPTION SUPPRESSION
+   ========================================================================== */
+#movie_player.ytl-track-active .ytp-caption-window-container,
+#movie_player.ytl-track-active .caption-window,
+#movie_player.ytl-track-active .ytp-caption-window-rollup {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* ==========================================================================
+   2. ROOT OVERLAY SYSTEM
+   ========================================================================== */
+#ytl-subtitle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  overflow: hidden;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   3. SUBTITLE STAGE PHYSICS & COLLISION AVOIDANCE
+   ========================================================================== */
+.ytl-subtitle-stage {
+  position: absolute;
+  left: var(--ytl-pos-x, 50%);
+  top: var(--ytl-pos-y, 88%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  width: max-content;
+  pointer-events: none;
+  cursor: default;
+  will-change: transform, left, top;
+  transition: transform 0.18s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.ytl-subtitle-stage.ytl-dragging {
+  cursor: grabbing !important;
+  transition: none !important;
+}
+
+#movie_player:not(.ytp-autohide) .ytl-subtitle-stage.ytl-collision-avoidance {
+  transform: translate(-50%, calc(-50% - 48px));
+}
+
+#movie_player.ytp-fullscreen:not(.ytp-autohide) .ytl-subtitle-stage.ytl-collision-avoidance,
+:fullscreen #movie_player:not(.ytp-autohide) .ytl-subtitle-stage.ytl-collision-avoidance {
+  transform: translate(-50%, calc(-50% - 78px)) !important;
+}
+
+.ytl-subtitle-stage.ytl-plate-locked {
+  cursor: default !important;
+}
+
+.ytl-subtitle-stage.ytl-plate-locked .ytl-drag-handle {
+  display: none !important;
+}
+
+/* ==========================================================================
+   4. NEO-MINIMALIST DRAG HANDLE
+   ========================================================================== */
+.ytl-drag-handle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 14px;
+  margin-bottom: 4px;
+  border-radius: 9999px;
+  background: rgba(14, 14, 17, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  pointer-events: auto !important;
+  cursor: grab !important;
+}
+
+.ytl-drag-handle svg {
+  width: 14px;
+  height: 8px;
+  fill: #aaaaaa;
+}
+
+.ytl-drag-handle:active {
+  cursor: grabbing !important;
+}
+
+.ytl-subtitle-stage.ytl-has-subtitles:not(.ytl-plate-locked):hover .ytl-drag-handle,
+.ytl-subtitle-stage.ytl-has-subtitles:not(.ytl-plate-locked).ytl-dragging .ytl-drag-handle {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. TRANSLUCENT SUBTITLE PLATE
+   ========================================================================== */
+.ytl-sub-plate {
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.35;
+  word-break: break-word;
+  white-space: normal !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  transition: background-color 0.15s ease, padding 0.15s ease;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: auto !important;
+  cursor: text;
+}
+
+.ytl-sub-plate.ytl-plate-visible {
+  display: inline-flex !important;
+}
+
+/* ==========================================================================
+   6. STRUCTURAL TEXT LAYOUT
+   ========================================================================== */
+.ytl-sub-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  width: 100% !important;
+  text-align: center !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.7), 0 0 1px rgba(0, 0, 0, 0.9);
+}
+
+.ytl-sub-text.ytl-trans-top {
+  flex-direction: column-reverse !important;
+}
+
+/* Text Alignment Handlers */
+.ytl-align-left {
+  text-align: left !important;
+}
+
+.ytl-align-center {
+  text-align: center !important;
+}
+
+.ytl-align-right {
+  text-align: right !important;
+}
+
+.ytl-align-justify {
+  text-align: justify !important;
+}
+
+/* Responsive Scaling */
+.ytp-fullscreen .ytl-sub-plate {
+  padding: 10px 24px;
+  border-radius: 16px;
+}
+
+.ytp-fullscreen .ytl-sub-text {
+  font-size: calc(var(--ytl-font-size, 25px) * 1.15);
+}
+
+/* ==========================================================================
+   7. DYNAMIC TRUE BOLD RENDERING (FIXED HORIZONTAL WORD FLOW)
+   ========================================================================== */
+
+/* Main Line Container (Block level container) */
+.ytl-sub-original {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  line-height: 1.35;
+  font-family: var(--ytl-main-font, "Roboto", sans-serif) !important;
+  font-size: var(--ytl-main-size, 25px) !important;
+  font-weight: var(--ytl-main-weight, 500) !important;
+  color: var(--ytl-main-color, #ffffff) !important;
+  -webkit-text-stroke: var(--ytl-main-stroke, 0px) currentColor !important;
+  paint-order: stroke fill !important;
+  font-synthesis: weight !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Translated Line Container */
+.ytl-sub-translated {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  line-height: 1.32;
+  font-family: var(--ytl-live-font, "Roboto", sans-serif) !important;
+  font-size: var(--ytl-live-size, 22px) !important;
+  font-weight: var(--ytl-live-weight, 500) !important;
+  color: var(--ytl-live-color, #00e676) !important;
+  -webkit-text-stroke: var(--ytl-live-stroke, 0px) currentColor !important;
+  paint-order: stroke fill !important;
+  font-synthesis: weight !important;
+  opacity: 0.96;
+}
+
+/* Universal Typeface Families */
+.ytl-font-system {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.ytl-font-sinhala {
+  font-family: "Noto Sans Sinhala", "Iskoola Pota", sans-serif !important;
+}
+
+.ytl-font-abhaya {
+  font-family: "FM Abhaya", "Abhaya Libre", serif !important;
+}
+
+.ytl-font-roboto {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.ytl-font-cinema {
+  font-family: "Georgia", "Cinzel", "Times New Roman", serif !important;
+}
+
+/* ==========================================================================
+   8. HIGH CONTRAST OUTLINES & SHADOW OVERRIDES
+   ========================================================================== */
+.ytl-has-shadow .ytl-sub-text,
+.ytl-has-shadow .ytl-sub-original,
+.ytl-has-shadow .ytl-sub-translated {
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.95),
+    0 0 2px rgba(0, 0, 0, 0.95),
+    1px 1px 2px rgba(0, 0, 0, 0.9),
+    -1px -1px 2px rgba(0, 0, 0, 0.9),
+    1px -1px 2px rgba(0, 0, 0, 0.9),
+    -1px 1px 2px rgba(0, 0, 0, 0.9),
+    0 1px 3px rgba(0, 0, 0, 0.9) !important;
+}
+
+.ytl-sub-plate:not(.ytl-has-shadow) .ytl-sub-text,
+.ytl-sub-plate:not(.ytl-has-shadow) .ytl-sub-original,
+.ytl-sub-plate:not(.ytl-has-shadow) .ytl-sub-translated {
+  text-shadow: none !important;
+}
+
+/* ==========================================================================
+   9. INTERACTIVE WORD HIGHLIGHT ENGINE (CRITICAL HORIZONTAL INLINE FIX)
+   ========================================================================== */
+.ytl-sub-original .ytl-hover-word,
+.ytl-hover-word {
+  display: inline !important;
+  width: auto !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  color: inherit;
+  -webkit-text-stroke: inherit !important;
+  paint-order: inherit !important;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: background-color 0.14s ease, color 0.14s ease;
+}
+
+.ytl-hover-word:hover {
+  background-color: var(--ytl-hover-word-bg, rgba(255, 255, 255, 0.22)) !important;
+  color: var(--ytl-hover-word-color, #ffea00) !important;
+}
+
+/* ==========================================================================
+   10. HOVER TOOLTIP TRANSLATION PLATE
+   ========================================================================== */
+#ytl-hover-tooltip {
+  position: absolute;
+  z-index: 65;
+  background-color: var(--ytl-hover-plate-bg, rgba(14, 14, 18, 0.94));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-family: var(--ytl-hover-font, "Roboto", sans-serif) !important;
+  font-size: var(--ytl-hover-size, 13px) !important;
+  font-weight: var(--ytl-hover-weight, 600) !important;
+  color: var(--ytl-hover-color, #00e676) !important;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  opacity: 0;
+}
+
+#ytl-hover-tooltip.ytl-tooltip-top {
+  transform: translate(-50%, -100%) translateY(-15px) !important;
+}
+
+#ytl-hover-tooltip.ytl-tooltip-bottom {
+  transform: translate(-50%, 0%) translateY(15px) !important;
+}
+
+#ytl-hover-tooltip.ytl-tooltip-visible {
+  opacity: 1;
+}
+
+#ytl-hover-tooltip.ytl-tooltip-no-shadow {
+  box-shadow: none !important;
+}
