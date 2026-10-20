@@ -60,7 +60,7 @@ Whether you want to learn a foreign language, understand global content, or down
 
 ### Option 1: Firefox Add-ons (Recommended)
 You can install LingoSub directly from the official Mozilla store safely and easily:
-* **[Install LingoSub on Firefox AMO](https://addons.mozilla.org/firefox/addon/lingosub)**
+* **[Install LingoSub on Firefox AMO](https://addons.mozilla.org/en-US/firefox/addon/lingosub/)**
 
 ### Option 2: Chrome Web Store
 * **Status:** Coming Soon! (Will be released shortly after our initial community feedback).
